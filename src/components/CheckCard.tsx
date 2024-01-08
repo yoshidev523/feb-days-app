@@ -68,7 +68,7 @@ export const CheckCard = () => {
         {checkStatus === "idle" && (
           <p
             className={
-              "animate-once animate-duration-1000 animate-ease-in-out text-center text-2xl font-bold"
+              "animate-fade-up text-center text-2xl font-bold"
             }
           >
             {message}
@@ -86,7 +86,7 @@ export const CheckCard = () => {
         {checkStatus === "error" && (
           <p
             className={
-              "animate-once animate-duration-1000 animate-ease-in-out text-center text-2xl font-bold text-red-600"
+              "animate-fade-up text-center text-2xl font-bold text-red-600"
             }
           >
             Something Wrong... :(
