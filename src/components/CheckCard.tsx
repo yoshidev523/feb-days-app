@@ -3,13 +3,12 @@ import React, { ChangeEvent, useState } from "react";
 import { CheckStatus } from "@/types/checkStatus";
 import { Message } from "@/components/Message";
 import { sleep } from "@/lib/sleep";
-import { getLeapDay } from "@/lib/yearUtil";
+import { yearUtil } from "@/lib/yearUtil";
 
 export const CheckCard = () => {
   const [message, setMessage] = useState(":)");
   const [checkStatus, setCheckStatus] = useState<CheckStatus>("idle");
   const [inputValue, setInputValue] = useState("");
-
   const handleClickCheckButton = async () => {
     setCheckStatus("checking");
 
@@ -20,7 +19,7 @@ export const CheckCard = () => {
       setCheckStatus("error");
       return;
     }
-    const result = getLeapDay(inputValueNum);
+    const result = yearUtil.getLeapDay(inputValueNum);
     if (result.status === "error") {
       setCheckStatus("error");
       return;
