@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly, checkStatus=checking 1`] = `
+<DocumentFragment>
+  <div>
+    <p
+      class="animate-infinite animate-ease-in-out animate-bounce text-center text-2xl font-bold"
+    >
+      Checking...
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders correctly, checkStatus=error 1`] = `
+<DocumentFragment>
+  <div>
+    <p
+      class="animate-fade-up text-center text-2xl font-bold text-red-600"
+    >
+      Something Wrong... :(
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders correctly, checkStatus=idle 1`] = `
+<DocumentFragment>
+  <div>
+    <p
+      class="animate-fade-up text-center text-2xl font-bold"
+    >
+      message
+    </p>
+  </div>
+</DocumentFragment>
+`;
