@@ -3,7 +3,7 @@ import React, { ChangeEvent, useState } from "react";
 import { CheckStatus } from "@/types/checkStatus";
 import { Message } from "@/components/Message";
 import { sleep } from "@/lib/sleep";
-import { getLeapDay } from "@/lib/yearUtil";
+import { yearUtil } from "@/lib/yearUtil";
 
 export const CheckCard = () => {
   const [message, setMessage] = useState(":)");
@@ -20,7 +20,7 @@ export const CheckCard = () => {
       setCheckStatus("error");
       return;
     }
-    const result = getLeapDay(inputValueNum);
+    const result = yearUtil.getLeapDay(inputValueNum);
     if (result.status === "error") {
       setCheckStatus("error");
       return;
@@ -37,6 +37,7 @@ export const CheckCard = () => {
     <div className={"space-y-6 rounded-2xl bg-white p-12"}>
       <div className={"flex justify-between space-x-3"}>
         <input
+          data-testid={"input"}
           type="number"
           onChange={handleChangeInput}
           className={

@@ -2,9 +2,11 @@
 
 exports[`renders correctly, checkStatus=checking 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    data-testid="message"
+  >
     <p
-      class="animate-infinite animate-ease-in-out animate-bounce text-center text-2xl font-bold"
+      class="animate-bounce text-center text-2xl font-bold animate-infinite animate-ease-in-out"
     >
       Checking...
     </p>
@@ -14,7 +16,9 @@ exports[`renders correctly, checkStatus=checking 1`] = `
 
 exports[`renders correctly, checkStatus=error 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    data-testid="message"
+  >
     <p
       class="animate-fade-up text-center text-2xl font-bold text-red-600"
     >
@@ -26,7 +30,9 @@ exports[`renders correctly, checkStatus=error 1`] = `
 
 exports[`renders correctly, checkStatus=idle 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    data-testid="message"
+  >
     <p
       class="animate-fade-up text-center text-2xl font-bold"
     >
