@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly checking 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="message"
+  >
+    <p
+      class="animate-bounce text-center text-2xl font-bold animate-infinite animate-ease-in-out"
+    >
+      Checking...
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders correctly error 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="message"
+  >
+    <p
+      class="animate-fade-up text-center text-2xl font-bold text-red-600"
+    >
+      Something Wrong... :(
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders correctly idle 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="message"
+  >
+    <p
+      class="animate-fade-up text-center text-2xl font-bold"
+    >
+      Message
+    </p>
+  </div>
+</DocumentFragment>
+`;
